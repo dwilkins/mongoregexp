@@ -2,7 +2,7 @@
 
 mkfifo loglines.pipe
 chmod 666 loglines.pipe
-gzip -dc loglines.txt.gz > loglines.pipe &
+bzip2 -dc loglines.txt.bz2 > loglines.pipe &
 # find / -ls > /mysql/data/db1/ls.dat &
 
 echo "drop database if exists logs;\
