@@ -8,7 +8,7 @@ bzip2 -dc loglines.txt.bz2 > loglines.pipe &
 echo "drop database if exists logs;\
 create database logs;
 use logs;
-create table loglines ( logline varchar(1024) null ) engine=MyISAM;
+create table loglines ( logline varchar(8192) null ) engine=MyISAM;
 load data local infile 'loglines.pipe'
 into table loglines
 fields terminated by '	';

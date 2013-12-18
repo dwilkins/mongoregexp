@@ -1,0 +1,15 @@
+flush tables;
+set profiling=1;
+select count(1) into @rows from loglines where logline regexp 'MSIE [0-9]{1,}[\.0-9]{0,}';
+set profiling=0;
+select query_id,'msiecount' as "Query",@rows as "Row Count", ceiling(sum(duration * 1000)) as msecs from information_schema.profiling group by query_id order by query_id desc limit 1;
+set profiling=1;
+select count(1) into @rows from loglines where logline regexp '^66\.249\.65\.20';
+set profiling=0;
+select query_id,'bolanchor' as "Query",@rows as "Row Count", ceiling(sum(duration * 1000)) as msecs from information_schema.profiling group by query_id order by query_id desc limit 1;
+-- flush tables;
+set profiling=1;
+select count(1) into @rows from loglines where logline regexp 'baidu\.com\/search\/spider\.html\)"$';
+set profiling=0;
+select query_id,'eolanchor' as "Query",@rows as "Row Count", ceiling(sum(duration * 1000)) as msecs from information_schema.profiling group by query_id order by query_id desc limit 1;
+-- flush tables;

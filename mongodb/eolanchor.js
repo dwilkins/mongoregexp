@@ -1,3 +1,3 @@
-var eol_count = db.loglines.find( { logline: /\+http:\/\/www.baidu.com\/search\/spider\.html\)"$/ ,$comment: "02-eolanchor"}).count();
-print(eol_count)
+var eol_count = db.loglines.find( { logline: /baidu\.com\/search\/spider\.html\)"$/i ,$comment: "02-eolanchor"}).count();
+print("02-eolanchor=" + eol_count);
 
