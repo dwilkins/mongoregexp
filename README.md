@@ -1,6 +1,6 @@
-# Regexp - MongoDB vs MySQL
+# Regexp - MongoDB vs MySQL vs Postgres
 
-Simple Regexp Performance comparison between MongoDB and MySQL
+Simple Regexp Performance comparison between MongoDB, MySQL(MariaDB) and Postgres
 
 ## Why
 
