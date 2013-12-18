@@ -23,9 +23,9 @@ is better at some simple regexes
 ### The Numbers
 Query|Rows|MongoDB ms|Postgres ms|MySQL ms|Winner
 -----|-----:|-----:|-----:|-----:|-----:
-bolanchor|128|295ms|2768ms|7769ms|MongoDB
-msiecount|371217|8512ms|5278ms|48027ms|Postgres *
-eolanchor|566760|3190ms|15892ms|61951ms|MongoDB
+bolanchor|128|**295ms**|2768ms|7769ms|MongoDB
+msiecount|371217|8512ms|**5278ms**|48027ms|Postgres *
+eolanchor|566760|**3190ms**|15892ms|61951ms|MongoDB
 
 * MongoDB wins on the second execution, once it caches some of the data in memory.   MongoDB
 Doesn't have a query cache like MySQL, so you can't get instant results for the exact same
