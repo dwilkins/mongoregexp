@@ -1,8 +1,6 @@
-MongoDB vs MySQL Simple Regexp Shootout (mongoregexp)
-===========
+# Regexp - MongoDB vs MySQL
 
 Simple Regexp Performance comparison between MongoDB and MySQL
-
 
 ## Why
 
